@@ -1,0 +1,91 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+#wrapper{
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    /* muja yha 3d ma kam karna tha isliya we use perspective */
+    perspective: 10px;
+    
+}
+.container{
+    position: relative;
+    display: flex;
+    /* if display flex nhi karaga to justiy and align use nhi kar payaga */
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    transform-style: preserve-3d;
+    z-index: -1;
+}
+
+.background{
+       transform: translateZ(-40px) scale(5);
+}
+.foreground{
+    /* men vali img aga ha background vali img sa */
+     transform: translateZ(-20px) scale(3);
+}
+
+.background,.foreground{
+    position: absolute;
+    height:100%;
+    width:100%;
+    z-index: -1;
+}
+h1{
+    position: absolute;
+    color: white;
+    font-size: 6rem;
+    text-shadow: 0 10px rgba(0,0,0,0.3);
+    padding-bottom: 200px;
+   
+}
+section {
+    background-color: rgba(45,45,45);
+    color: white;
+    padding: 5rem 0;
+}
+
+.bg1{
+    background-image: url(image/sport-1.jpg);
+}
+.bg2{
+    background-image: url(image/sport-2.jpg);
+}
+.bg3{
+    background-image: url(image/sport-3.jpg);
+}
+.text{
+     font-size: 1.2rem;
+     padding: 0  10rem;
+     margin: 3rem  0;
+}
+.bg{
+    position: relative;
+    width: 100%;
+    height: 500px;
+    /* scroll effect najar ayaa isliya img ko fix kardiya ha */
+    background-attachment: fixed;
+    background-position: center;
+    /* meri img screen ko cover karde  */
+    background-size: cover;
+
+}
+.desc{
+    position: absolute;
+    background-color: white;
+    color: black;
+    text-align: center;
+    top:40%;
+    left:47%;
+    padding: 0.5rem 2.5rem;
+}
+.secHeading{
+    /* padding-left: 155px;  */
+    font-size: 2.7rem;
+    padding: 0 10rem;
+}
